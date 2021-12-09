@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { MainLayout } from '../layouts/main';
+import { MainLayout } from 'layouts/main';
 
 export const BlogDetailPage = ({ data }: any) => {
     const { markdownRemark } = data;

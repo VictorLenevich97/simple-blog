@@ -3,6 +3,7 @@ module.exports = {
         title: 'simple-blog',
     },
     plugins: [
+        'gatsby-plugin-resolve-src',
         'gatsby-plugin-emotion',
         'gatsby-plugin-image',
         'gatsby-plugin-react-helmet',
