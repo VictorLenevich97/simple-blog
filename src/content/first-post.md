@@ -1,5 +1,5 @@
 ---
-slug: "/first-post"
-date: "2021-05-04"
-title: "My first blog post"
+slug: "/what-is-javascript"
+date: "2021-12-07"
+title: "What`s JavaScript"
 ---
