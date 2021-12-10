@@ -1,0 +1,5 @@
+export enum THEME_TYPES {
+    THEME_TYPE = 'THEME_TYPE',
+    LIGHT_THEME = 'LIGHT_THEME',
+    DARK_THEME = 'DARK_THEME',
+}

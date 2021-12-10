@@ -1,11 +1,10 @@
-import * as React from 'react';
-import { MainLayout } from 'layouts/main';
+import { ThemeLayout } from 'layouts/themeLayout';
 
 const IndexPage = () => {
     return (
-        <MainLayout>
+        <ThemeLayout>
             <span>Welcome! It`s my first blog</span>
-        </MainLayout>
+        </ThemeLayout>
     );
 };
 

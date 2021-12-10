@@ -1,19 +1,18 @@
-import React from 'react';
 import { graphql } from 'gatsby';
-import { MainLayout } from 'layouts/main';
+import { ThemeLayout } from 'layouts/themeLayout';
 
 export const BlogDetailPage = ({ data }: any) => {
     const { markdownRemark } = data;
     const { frontmatter, html } = markdownRemark;
 
     return (
-        <MainLayout>
+        <ThemeLayout>
             <div>
                 <h1>{frontmatter.title}</h1>
                 <h2>{frontmatter.date}</h2>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
             </div>
-        </MainLayout>
+        </ThemeLayout>
     );
 };
 
