@@ -1,9 +1,10 @@
 import { ThemeLayout } from 'layouts/themeLayout';
+import { PostsList } from 'modules/postsList';
 
 const IndexPage = () => {
     return (
         <ThemeLayout>
-            <span>Welcome! It`s my first blog</span>
+            <PostsList />
         </ThemeLayout>
     );
 };

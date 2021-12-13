@@ -1,12 +1,16 @@
 import { useState } from 'react';
+import * as R from 'ramda';
 import { useStaticQuery, graphql } from 'gatsby';
-import { ThemeProvider } from '@emotion/react';
+import { ThemeProvider, Global } from '@emotion/react';
 import { Header } from 'components/header';
 import { ThemeContext } from 'context/themeContext';
 import { THEME_TYPES } from 'types/themeTypes';
 
-import { lightTheme } from 'themes/light-theme';
-import { darkTheme } from 'themes/dark-theme';
+import { lightTheme } from 'themes/lightTheme';
+import { darkTheme } from 'themes/darkTheme';
+import { defaultTheme } from 'themes/defaultTheme';
+
+import { globalStyles } from './themeLayout.styled';
 
 interface Props {
     children: React.ReactNode;
@@ -26,6 +30,11 @@ export const ThemeLayout = ({ pageTitle, children }: Props) => {
         }
     `);
 
+    const changeThemeConfig = () => {
+        const selectedTheme = themeType === THEME_TYPES.LIGHT_THEME ? lightTheme : darkTheme;
+        return R.mergeDeepWith(R.concat, defaultTheme, selectedTheme);
+    };
+
     return (
         <ThemeContext.Provider
             value={{
@@ -36,10 +45,11 @@ export const ThemeLayout = ({ pageTitle, children }: Props) => {
                 handleChangeTheme: setThemeType,
             }}
         >
-            <ThemeProvider theme={themeType === THEME_TYPES.LIGHT_THEME ? lightTheme : darkTheme}>
+            <ThemeProvider theme={changeThemeConfig()}>
                 <title>
                     {pageTitle} | {data.site.siteMetadata.title}
                 </title>
+                <Global styles={globalStyles(changeThemeConfig())} />
                 <Header />
                 <main>{children}</main>
             </ThemeProvider>

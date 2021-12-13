@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import { useThemeContext } from 'hooks/useThemeContext';
 import { THEME_TYPES } from 'types/themeTypes';
+import { useTheme } from '@emotion/react';
 
 import * as S from './header.styled';
 

@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export const Nav = styled.nav`
     height: 5rem;
-    background-color: ${({ theme }: any) => theme.color.backgroundColor};
 
     ul {
         height: 100%;
