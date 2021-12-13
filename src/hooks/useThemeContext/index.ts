@@ -5,10 +5,10 @@ import { THEME_TYPES } from 'types/themeTypes';
 export const useThemeContext = () => {
     const theme = React.useContext(ThemeContext);
 
-    const setThemeToCache = (value) => {
+    const setThemeTypeToCache = (value) => {
         localStorage.setItem(THEME_TYPES.THEME_TYPE, value);
-        theme.handleChangeTheme(value);
+        theme.handleChangeThemeType(value);
     };
 
-    return { ...theme, handleChangeTheme: setThemeToCache };
+    return { ...theme, handleChangeThemeType: setThemeTypeToCache };
 };

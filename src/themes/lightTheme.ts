@@ -1,6 +1,7 @@
 export const lightTheme = {
     color: {
-        backgroundColor: '#FDFFFC',
+        backgroundColor: '#fdfffc',
         fontsColor: '#011627',
+        hoverFontsColor: '#fdfffc',
     },
 };

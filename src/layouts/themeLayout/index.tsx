@@ -5,6 +5,7 @@ import { ThemeProvider, Global } from '@emotion/react';
 import { Header } from 'components/header';
 import { ThemeContext } from 'context/themeContext';
 import { THEME_TYPES } from 'types/themeTypes';
+import { Footer } from 'components/footer';
 
 import { lightTheme } from 'themes/lightTheme';
 import { darkTheme } from 'themes/darkTheme';
@@ -38,20 +39,21 @@ export const ThemeLayout = ({ pageTitle, children }: Props) => {
     return (
         <ThemeContext.Provider
             value={{
-                theme:
+                themeType:
                     themeType === THEME_TYPES.LIGHT_THEME
                         ? THEME_TYPES.LIGHT_THEME
                         : THEME_TYPES.DARK_THEME,
-                handleChangeTheme: setThemeType,
+                handleChangeThemeType: setThemeType,
             }}
         >
             <ThemeProvider theme={changeThemeConfig()}>
+                <Global styles={globalStyles(changeThemeConfig())} />
                 <title>
                     {pageTitle} | {data.site.siteMetadata.title}
                 </title>
-                <Global styles={globalStyles(changeThemeConfig())} />
                 <Header />
                 <main>{children}</main>
+                <Footer />
             </ThemeProvider>
         </ThemeContext.Provider>
     );

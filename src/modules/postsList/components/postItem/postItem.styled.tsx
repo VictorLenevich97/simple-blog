@@ -9,6 +9,11 @@ export const Container = styled.div`
     &:hover {
         background-color: ${({ theme }: any) => theme.color.primaryColor};
         transition: all 0.5s;
+
+        h1 {
+            color: ${({ theme }: { theme: any }) => theme.color.hoverFontsColor};
+            transition: all 0.5s;
+        }
     }
 `;
 

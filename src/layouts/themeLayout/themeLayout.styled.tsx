@@ -4,11 +4,13 @@ export const globalStyles = (theme) => {
     return css`
         html,
         body {
-            font-family: 'Arial';
+            font-family: 'Noto Sans', sans-serif;
             margin: 0 auto;
             max-width: 1200px;
             background-color: ${theme.color.backgroundColor};
             color: ${theme.color.fontsColor};
+            min-height: 100vh;
+            position: relative;
         }
 
         h1,

@@ -1,12 +1,11 @@
 import { Link } from 'gatsby';
 import { useThemeContext } from 'hooks/useThemeContext';
 import { THEME_TYPES } from 'types/themeTypes';
-import { useTheme } from '@emotion/react';
 
 import * as S from './header.styled';
 
 export const Header = () => {
-    const { theme: typeTheme, handleChangeTheme } = useThemeContext();
+    const { themeType, handleChangeThemeType } = useThemeContext();
 
     return (
         <S.Nav>
@@ -21,19 +20,16 @@ export const Header = () => {
                     <Link to="/">Blog</Link>
                 </li>
                 <li>
-                    <button
+                    <S.SwitchTheme
+                        isDark={themeType === THEME_TYPES.DARK_THEME}
                         onClick={() =>
-                            handleChangeTheme(
-                                typeTheme === THEME_TYPES.LIGHT_THEME
+                            handleChangeThemeType(
+                                themeType === THEME_TYPES.LIGHT_THEME
                                     ? THEME_TYPES.DARK_THEME
                                     : THEME_TYPES.LIGHT_THEME
                             )
                         }
-                    >
-                        {typeTheme === THEME_TYPES.LIGHT_THEME
-                            ? 'Disable dark theme'
-                            : 'Disable light theme'}
-                    </button>
+                    />
                 </li>
             </ul>
         </S.Nav>

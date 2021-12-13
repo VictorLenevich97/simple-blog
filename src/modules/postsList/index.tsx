@@ -10,7 +10,7 @@ export const PostsList = () => {
 
     return (
         <S.Container>
-            <Title isMarginBottom content="Posts list" size={TitleSizes.LARGE} />
+            <Title isMarginBottom content="Recent posts" size={TitleSizes.LARGE} />
             {postsData.map(
                 ({
                     node: {
@@ -33,7 +33,7 @@ export const PostsQuery = graphql`
                     frontmatter {
                         title
                         slug
-                        date
+                        date(formatString: "MMMM DD, YYYY")
                     }
                     id
                 }

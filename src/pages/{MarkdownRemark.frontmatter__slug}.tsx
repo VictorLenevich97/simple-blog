@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
 import { ThemeLayout } from 'layouts/themeLayout';
+import { PostDetail } from 'modules/postDetail';
 
 export const BlogDetailPage = ({ data }: any) => {
     const { markdownRemark } = data;
@@ -7,11 +8,7 @@ export const BlogDetailPage = ({ data }: any) => {
 
     return (
         <ThemeLayout>
-            <div>
-                <h1>{frontmatter.title}</h1>
-                <h2>{frontmatter.date}</h2>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
-            </div>
+            <PostDetail title={frontmatter.title} date={frontmatter.date} html={html} />
         </ThemeLayout>
     );
 };
