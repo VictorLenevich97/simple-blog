@@ -1,4 +1,4 @@
-import { Title, TitleSizes } from 'components/ui/title';
+import { Title, TitleSizes, TitlePosition } from 'components/ui/title';
 
 import * as S from './postDetail.styled';
 
@@ -10,7 +10,7 @@ interface Props {
 
 export const PostDetail = ({ title, date, html }: Props) => (
     <S.Container>
-        <Title content={title} size={TitleSizes.MIDDLE} />
+        <Title content={title} size={TitleSizes.MIDDLE} position={TitlePosition.CENTER} />
         <span>{date}</span>
         <div dangerouslySetInnerHTML={{ __html: html }} />
     </S.Container>

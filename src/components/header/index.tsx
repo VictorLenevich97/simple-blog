@@ -14,10 +14,10 @@ export const Header = () => {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/">About</Link>
+                    <Link to="/about">About me</Link>
                 </li>
                 <li>
-                    <Link to="/">Blog</Link>
+                    <Link to="/contacts">Contacts</Link>
                 </li>
                 <li>
                     <S.SwitchTheme

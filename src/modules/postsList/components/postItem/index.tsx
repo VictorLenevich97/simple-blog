@@ -11,11 +11,11 @@ interface Props {
 
 export const PostItem = ({ title, slug, date }: Props) => {
     return (
-        <S.Container>
-            <Link to={slug}>
+        <Link to={slug}>
+            <S.Container>
                 <S.Date>{date}</S.Date>
                 <Title size={TitleSizes.MIDDLE} content={title} />
-            </Link>
-        </S.Container>
+            </S.Container>
+        </Link>
     );
 };

@@ -27,7 +27,6 @@ export const SwitchTheme = styled(LampIcon)`
     cursor: pointer;
     fill: ${({ isDark, theme }: { isDark: boolean; theme: any }) =>
         isDark ? '#fadb14' : theme.color.primaryColor};
-    transform: ${({ isDark, theme }: { isDark: boolean; theme: any }) =>
-        isDark ? 'rotate(180deg)' : 'rotate(0deg)'};
+    transform: ${({ isDark }: { isDark: boolean }) => (isDark ? 'rotate(180deg)' : 'rotate(0deg)')};
     transition: transform 0.5s;
 `;

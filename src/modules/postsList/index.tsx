@@ -10,7 +10,7 @@ export const PostsList = () => {
 
     return (
         <S.Container>
-            <Title isMarginBottom content="Recent posts" size={TitleSizes.LARGE} />
+            <Title isMarginBottom content="Recent posts 💣" size={TitleSizes.LARGE} />
             {postsData.map(
                 ({
                     node: {
