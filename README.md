@@ -1,7 +1,7 @@
 ## 🚀 Welcome to my blog
 
-## Install dep: npm install
-## Start: gatsby develop
-## Build: gatsby build
+#### Install dep: npm install
+#### Start: gatsby develop
+#### Build: gatsby build
 
 

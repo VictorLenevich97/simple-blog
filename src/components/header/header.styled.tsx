@@ -16,7 +16,7 @@ export const Nav = styled.nav`
 
         li > a {
             text-decoration: none;
-            color: ${({ theme }: any) => theme.color.fontsColor};
+            color: ${({ theme }) => theme.color.fontsColor};
         }
     }
 `;
@@ -25,8 +25,7 @@ export const SwitchTheme = styled(LampIcon)`
     width: 30px;
     height: 30px;
     cursor: pointer;
-    fill: ${({ isDark, theme }: { isDark: boolean; theme: any }) =>
-        isDark ? '#fadb14' : theme.color.primaryColor};
+    fill: ${(props) => (props.isDark ? '#fadb14' : props.theme.color.primaryColor)};
     transform: ${({ isDark }: { isDark: boolean }) => (isDark ? 'rotate(180deg)' : 'rotate(0deg)')};
     transition: transform 0.5s;
 `;
