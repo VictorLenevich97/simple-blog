@@ -12,6 +12,6 @@ export const PostDetail = ({ title, date, html }: Props) => (
     <S.Container>
         <Title content={title} size={TitleSizes.MIDDLE} position={TitlePosition.CENTER} />
         <span>{date}</span>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <S.Content dangerouslySetInnerHTML={{ __html: html }} />
     </S.Container>
 );

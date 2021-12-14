@@ -5,6 +5,7 @@ import { PostDetail } from 'modules/postDetail';
 export const BlogDetailPage = ({ data }: any) => {
     const { markdownRemark } = data;
     const { frontmatter, html } = markdownRemark;
+    console.log('html', html);
 
     return (
         <ThemeLayout>
