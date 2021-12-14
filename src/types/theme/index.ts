@@ -14,7 +14,8 @@ declare module '@emotion/react' {
     }
 }
 
-declare module '*.svg' {
-    const content: any;
-    export default content;
+export enum THEME_TYPES {
+    THEME_TYPE = 'THEME_TYPE',
+    LIGHT_THEME = 'LIGHT_THEME',
+    DARK_THEME = 'DARK_THEME',
 }

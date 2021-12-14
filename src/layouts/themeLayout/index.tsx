@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeProvider, Global } from '@emotion/react';
 import { Header } from 'components/header';
 import { ThemeContext } from 'context/themeContext';
-import { THEME_TYPES } from 'types/themeTypes';
+import { THEME_TYPES } from 'types/theme';
 import { Footer } from 'components/footer';
 
 import { lightTheme } from 'themes/lightTheme';

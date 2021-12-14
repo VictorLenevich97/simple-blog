@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import { useThemeContext } from 'hooks/useThemeContext';
-import { THEME_TYPES } from 'types/themeTypes';
+import { THEME_TYPES } from 'types/theme';
 import { usePathName } from 'hooks/usePathName';
 import { ROUTES } from 'constant/routes';
 
