@@ -11,7 +11,6 @@ export const globalStyles = (theme) => {
             color: ${theme.color.fontsColor};
             min-height: 100vh;
             position: relative;
-            transition: background-color 0.5s;
         }
 
         h1,
